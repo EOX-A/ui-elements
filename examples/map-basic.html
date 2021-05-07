@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>map-basic | EOxElements</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Geospatial UI Elements, written in Vue.js">
+    
+    <link rel="preload" href="/elements/assets/css/2.styles.184b7e45.css" as="style"><link rel="preload" href="/elements/assets/js/app.8d6c89a6.js" as="script"><link rel="preload" href="/elements/assets/js/11.5bd8283b.js" as="script"><link rel="preload" href="/elements/assets/js/48.5c8d5ce5.js" as="script"><link rel="prefetch" href="/elements/assets/js/0.d55b8f7f.js"><link rel="prefetch" href="/elements/assets/js/1.3e24deb1.js"><link rel="prefetch" href="/elements/assets/js/10.e271a927.js"><link rel="prefetch" href="/elements/assets/js/12.58d55393.js"><link rel="prefetch" href="/elements/assets/js/13.2b070c6d.js"><link rel="prefetch" href="/elements/assets/js/14.97b2f143.js"><link rel="prefetch" href="/elements/assets/js/15.d7a2061e.js"><link rel="prefetch" href="/elements/assets/js/16.86bbd868.js"><link rel="prefetch" href="/elements/assets/js/17.fde7b690.js"><link rel="prefetch" href="/elements/assets/js/18.968eedd4.js"><link rel="prefetch" href="/elements/assets/js/19.f9a62692.js"><link rel="prefetch" href="/elements/assets/js/20.8a5c3cae.js"><link rel="prefetch" href="/elements/assets/js/21.d0a7608c.js"><link rel="prefetch" href="/elements/assets/js/22.868fffe9.js"><link rel="prefetch" href="/elements/assets/js/23.d43d9936.js"><link rel="prefetch" href="/elements/assets/js/24.4389fedd.js"><link rel="prefetch" href="/elements/assets/js/25.25b38c82.js"><link rel="prefetch" href="/elements/assets/js/26.3983d188.js"><link rel="prefetch" href="/elements/assets/js/27.cc62ef98.js"><link rel="prefetch" href="/elements/assets/js/28.fd5d8f7b.js"><link rel="prefetch" href="/elements/assets/js/29.c7c5de94.js"><link rel="prefetch" href="/elements/assets/js/3.410e4735.js"><link rel="prefetch" href="/elements/assets/js/30.4eda8092.js"><link rel="prefetch" href="/elements/assets/js/31.43a3534a.js"><link rel="prefetch" href="/elements/assets/js/32.305f83ab.js"><link rel="prefetch" href="/elements/assets/js/33.5a689831.js"><link rel="prefetch" href="/elements/assets/js/34.a458c904.js"><link rel="prefetch" href="/elements/assets/js/35.8b4194cb.js"><link rel="prefetch" href="/elements/assets/js/36.e1ffb3d1.js"><link rel="prefetch" href="/elements/assets/js/37.7b262c3c.js"><link rel="prefetch" href="/elements/assets/js/38.025e35ed.js"><link rel="prefetch" href="/elements/assets/js/39.91dcfb40.js"><link rel="prefetch" href="/elements/assets/js/4.d4fcbb4f.js"><link rel="prefetch" href="/elements/assets/js/40.b1e742dd.js"><link rel="prefetch" href="/elements/assets/js/41.28d5f2fa.js"><link rel="prefetch" href="/elements/assets/js/42.3ace3df2.js"><link rel="prefetch" href="/elements/assets/js/43.3ed13c7c.js"><link rel="prefetch" href="/elements/assets/js/44.34d64e4d.js"><link rel="prefetch" href="/elements/assets/js/45.c3e4132a.js"><link rel="prefetch" href="/elements/assets/js/46.95be6de1.js"><link rel="prefetch" href="/elements/assets/js/47.75e8c308.js"><link rel="prefetch" href="/elements/assets/js/49.f6775f66.js"><link rel="prefetch" href="/elements/assets/js/5.323e17a5.js"><link rel="prefetch" href="/elements/assets/js/50.d05a6125.js"><link rel="prefetch" href="/elements/assets/js/6.f2ccb979.js"><link rel="prefetch" href="/elements/assets/js/9.2355adb4.js"><link rel="prefetch" href="/elements/assets/js/examples.a1548c59.js">
+    <link rel="stylesheet" href="/elements/assets/css/2.styles.184b7e45.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/elements/" class="home-link router-link-active"><!----> <span class="site-name">EOxElements</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/elements/examples/" class="nav-link router-link-active">
+  Examples
+</a></div><div class="nav-item"><a href="/elements/api/" class="nav-link">
+  Api
+</a></div> <a href="https://github.com/EOX-A/elements" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/elements/examples/" class="nav-link router-link-active">
+  Examples
+</a></div><div class="nav-item"><a href="/elements/api/" class="nav-link">
+  Api
+</a></div> <a href="https://github.com/EOX-A/elements" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Examples</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/elements/examples/map-basic.html" aria-current="page" class="active sidebar-link">map-basic</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/elements/examples/map-basic.html#basic-example" class="sidebar-link">Basic example</a></li><li class="sidebar-sub-header"><a href="/elements/examples/map-basic.html#simple-layer-selector" class="sidebar-link">Simple layer selector</a></li><li class="sidebar-sub-header"><a href="/elements/examples/map-basic.html#vector-layer-and-fill-color-function" class="sidebar-link">Vector layer and fill color function</a></li><li class="sidebar-sub-header"><a href="/elements/examples/map-basic.html#map-with-a-custom-feature" class="sidebar-link">Map with a custom feature</a></li><li class="sidebar-sub-header"><a href="/elements/examples/map-basic.html#map-created-from-mapbox-style-document" class="sidebar-link">Map created from Mapbox style document</a></li><li class="sidebar-sub-header"><a href="/elements/examples/map-basic.html#highlighting-features-by-attribute" class="sidebar-link">Highlighting features by attribute</a></li><li class="sidebar-sub-header"><a href="/elements/examples/map-basic.html#vector-layer-with-tooltips" class="sidebar-link">Vector layer with tooltips</a></li></ul></li><li><a href="/elements/examples/map-layer-swipe.html" class="sidebar-link">map-layer-swipe</a></li><li><a href="/elements/examples/map-source-select.html" class="sidebar-link">map-source-select</a></li><li><a href="/elements/examples/charts.html" class="sidebar-link">charts</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="map-basic"><a href="#map-basic" class="header-anchor">#</a> map-basic</h1> <h2 id="basic-example"><a href="#basic-example" class="header-anchor">#</a> Basic example</h2> <div data-app="true" id="app" class="v-application fill-height v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-main fill-height" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-main__wrap"><div style="height:400px;"><!----></div></div></main></div></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-basic</span>
+    <span class="token attr-name">:zoom.sync</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zoom<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:center.sync</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:layers</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layers<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name">
+    <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> MapBasic <span class="token keyword">from</span> <span class="token string">'@eox/map-basic'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    MapBasic<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    zoom<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    center<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    layers<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'cloudless'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'Sentinel-2 cloudless 2019'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'wmts-capabilities'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml'</span><span class="token punctuation">,</span>
+          layerName<span class="token operator">:</span> <span class="token string">'s2cloudless-2019_3857'</span><span class="token punctuation">,</span>
+          matrixSet<span class="token operator">:</span> <span class="token string">'GoogleMapsCompatible'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="simple-layer-selector"><a href="#simple-layer-selector" class="header-anchor">#</a> Simple layer selector</h2> <div data-app="true" id="app" class="v-application fill-height v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-main fill-height" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-main__wrap"><div style="height:400px;"><!----></div></div></main></div></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-basic</span>
+    <span class="token attr-name">:zoom</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zoom<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:layers</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layers<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name">
+    <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-card</span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>pa-3<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name">
+      <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span> <span class="token property">right</span><span class="token punctuation">:</span> 20px</span><span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-switch</span>
+        <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layer in layers<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layer.id<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layer.visible<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layer.title<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">hide-details</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mt-0<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-switch</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-card</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map-basic</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> MapBasic <span class="token keyword">from</span> <span class="token string">'@eox/map-basic'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    MapBasic<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    zoom<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    layers<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'cloudless'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'WMTS from Capabilities'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'wmts-capabilities'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml'</span><span class="token punctuation">,</span>
+          layerName<span class="token operator">:</span> <span class="token string">'s2cloudless-2019_3857'</span><span class="token punctuation">,</span>
+          matrixSet<span class="token operator">:</span> <span class="token string">'GoogleMapsCompatible'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment">// Tile layer with WMTS source</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'wmts'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'WMTS'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'wmts'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://services.arcgisonline.com/arcgis/rest/services/Demographics/USA_Population_Density/MapServer/WMTS/'</span><span class="token punctuation">,</span>
+          layerName<span class="token operator">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+          matrixSet<span class="token operator">:</span> <span class="token string">'EPSG:3857'</span><span class="token punctuation">,</span>
+          format<span class="token operator">:</span> <span class="token string">'image/png'</span><span class="token punctuation">,</span>
+          styleName<span class="token operator">:</span> <span class="token string">'default'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment">// Tile layer with WMS source</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'wms'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'Tile WMS'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'tile-wms'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://ahocevar.com/geoserver/wms'</span><span class="token punctuation">,</span>
+          layers<span class="token operator">:</span> <span class="token string">'topp:states'</span><span class="token punctuation">,</span>
+          extParams<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token constant">TILED</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+          serverType<span class="token operator">:</span> <span class="token string">'geoserver'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'wms-image'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'Image WMS'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'image'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'image-wms'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://ahocevar.com/geoserver/wms'</span><span class="token punctuation">,</span>
+          layers<span class="token operator">:</span> <span class="token string">'topp:states'</span><span class="token punctuation">,</span>
+          serverType<span class="token operator">:</span> <span class="token string">'geoserver'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'wfs'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'WFS'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'vector'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        renderMode<span class="token operator">:</span> <span class="token string">'image'</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'vector'</span><span class="token punctuation">,</span>
+          features<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token function">url</span><span class="token punctuation">(</span><span class="token parameter">extent<span class="token punctuation">,</span> resolution<span class="token punctuation">,</span> projection</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">'https://ahocevar.com/geoserver/wfs?service=WFS&amp;'</span> <span class="token operator">+</span>
+              <span class="token string">'version=1.1.0&amp;request=GetFeature&amp;typename=osm:water_areas&amp;'</span> <span class="token operator">+</span>
+              <span class="token string">'outputFormat=application/json&amp;srsname='</span> <span class="token operator">+</span> projection <span class="token operator">+</span> <span class="token string">'&amp;'</span> <span class="token operator">+</span>
+              <span class="token string">'bbox='</span> <span class="token operator">+</span> extent<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">','</span> <span class="token operator">+</span> projection
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token comment">// strategyFactory() {</span>
+            <span class="token comment">//   return loadingBBox</span>
+          <span class="token comment">// },</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment">// Countries vector layer</span>
+      <span class="token comment">// loads GeoJSON data from remote server</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'countries'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'Vector'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'vector'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'vector'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://openlayers.org/en/latest/examples/data/geojson/countries.geojson'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        style<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            fill<span class="token operator">:</span> <span class="token punctuation">{</span>
+              color<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            stroke<span class="token operator">:</span> <span class="token punctuation">{</span>
+              color<span class="token operator">:</span> <span class="token string">'#219e46'</span><span class="token punctuation">,</span>
+              width<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            text<span class="token operator">:</span> <span class="token punctuation">{</span>
+              text<span class="token operator">:</span> <span class="token string">'\uf041'</span><span class="token punctuation">,</span>
+              font<span class="token operator">:</span> <span class="token string">'24px FontAwesome'</span><span class="token punctuation">,</span>
+              fill<span class="token operator">:</span> <span class="token punctuation">{</span>
+                color<span class="token operator">:</span> <span class="token string">'#2355af'</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              stroke<span class="token operator">:</span> <span class="token punctuation">{</span>
+                color<span class="token operator">:</span> <span class="token string">'white'</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'vector-tiles'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'Vector tiles'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://basemaps.arcgis.com/v1/arcgis/rest/services/World_Basemap/VectorTileServer/tile/{z}/{y}/{x}.pbf'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        style<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            stroke<span class="token operator">:</span> <span class="token punctuation">{</span>
+              width<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+              color<span class="token operator">:</span> <span class="token string">'#2979ff'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            circle<span class="token operator">:</span> <span class="token punctuation">{</span>
+              radius<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+              stroke<span class="token operator">:</span> <span class="token punctuation">{</span>
+                width<span class="token operator">:</span> <span class="token number">1.5</span><span class="token punctuation">,</span>
+                color<span class="token operator">:</span> <span class="token string">'#2979ff'</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'xyz'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'XYZ'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'xyz'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="vector-layer-and-fill-color-function"><a href="#vector-layer-and-fill-color-function" class="header-anchor">#</a> Vector layer and fill color function</h2> <div data-app="true" id="app" class="v-application fill-height v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-main fill-height" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-main__wrap"><div style="height:400px;"><!----></div></div></main></div></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-basic</span>
+    <span class="token attr-name">:zoom</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zoom<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:center</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:layers</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layers<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name">
+    <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map-basic</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> MapBasic <span class="token keyword">from</span> <span class="token string">'@eox/map-basic'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    MapBasic<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      zoom<span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+      center<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1731756</span><span class="token punctuation">,</span> <span class="token number">6228616</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      layers<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'group'</span><span class="token punctuation">,</span>
+          layers<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">// background layer</span>
+            <span class="token punctuation">{</span>
+              id<span class="token operator">:</span> <span class="token string">'terrain'</span><span class="token punctuation">,</span>
+              title<span class="token operator">:</span> <span class="token string">'Terrain Light'</span><span class="token punctuation">,</span>
+              type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+              visible<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              source<span class="token operator">:</span> <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'wmts-capabilities'</span><span class="token punctuation">,</span>
+                url<span class="token operator">:</span> <span class="token string">'https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml'</span><span class="token punctuation">,</span>
+                layerName<span class="token operator">:</span> <span class="token string">'terrain-light'</span><span class="token punctuation">,</span>
+                matrixSet<span class="token operator">:</span> <span class="token string">'WGS84'</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment">// vector layer with dynamic styling</span>
+            <span class="token punctuation">{</span>
+              id<span class="token operator">:</span> <span class="token string">'parcels-dynamic'</span><span class="token punctuation">,</span>
+              title<span class="token operator">:</span> <span class="token string">'Agricultural Parcels'</span><span class="token punctuation">,</span>
+              type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+              visible<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              source<span class="token operator">:</span> <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+                url<span class="token operator">:</span> <span class="token string">'https://pg-tileserv.demo.hub.eox.at/demo.agri_data_declaration/{z}/{x}/{y}.pbf'</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              style<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>parcelStyleFunc<span class="token punctuation">,</span>
+              declutter<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment">// vector layer with static styling</span>
+            <span class="token punctuation">{</span>
+              id<span class="token operator">:</span> <span class="token string">'parcels-static'</span><span class="token punctuation">,</span>
+              title<span class="token operator">:</span> <span class="token string">'Agricultural Parcels'</span><span class="token punctuation">,</span>
+              type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+              visible<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              source<span class="token operator">:</span> <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+                url<span class="token operator">:</span> <span class="token string">'https://pg-tileserv.demo.hub.eox.at/demo.agri_data_declaration/{z}/{x}/{y}.pbf'</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              style<span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                  stroke<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    color<span class="token operator">:</span> <span class="token string">'blue'</span><span class="token punctuation">,</span>
+                    width<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+                    lineDash<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">parcelStyleFunc</span><span class="token punctuation">(</span><span class="token parameter">feature</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> fillColor <span class="token operator">=</span> <span class="token string">'#9999'</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>feature<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'crop_id'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">90</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        fillColor <span class="token operator">=</span> <span class="token string">'#ffff0099'</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>feature<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'crop_id'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">120</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        fillColor <span class="token operator">=</span> <span class="token string">'#fcba03'</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>feature<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'crop_id'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">150</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        fillColor <span class="token operator">=</span> <span class="token string">'#0ffc03'</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">const</span> parcelStyle <span class="token operator">=</span> <span class="token punctuation">{</span>
+        strokeColor<span class="token operator">:</span> <span class="token string">'#000'</span><span class="token punctuation">,</span>
+        strokeWidth<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        fillColor<span class="token punctuation">,</span>
+        textFillColor<span class="token operator">:</span> <span class="token string">&quot;black&quot;</span><span class="token punctuation">,</span>
+        textStrokeColor<span class="token operator">:</span> <span class="token string">&quot;white&quot;</span><span class="token punctuation">,</span>
+        textStrokeWidth<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+        textOverflow<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        text<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>feature<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'parcel_id'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> parcelStyle<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="map-with-a-custom-feature"><a href="#map-with-a-custom-feature" class="header-anchor">#</a> Map with a custom feature</h2> <div data-app="true" id="app" class="v-application fill-height v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-main fill-height" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-main__wrap"><div style="height:400px;"><!----></div></div></main></div></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-basic</span>
+    <span class="token attr-name">:zoom</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zoom<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:center</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">showCenter</span>
+    <span class="token attr-name">:mapConfig</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{
+      <span class="token punctuation">'</span>data-projection<span class="token punctuation">'</span>: <span class="token punctuation">'</span>EPSG:4326<span class="token punctuation">'</span>,
+    }<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:viewConfig</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{
+      <span class="token punctuation">'</span>projection<span class="token punctuation">'</span>: <span class="token punctuation">'</span>EPSG:3857<span class="token punctuation">'</span>,
+    }<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:layers</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layers<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:features</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>features<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name">
+    <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> MapBasic <span class="token keyword">from</span> <span class="token string">'@eox/map-basic'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    MapBasic
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    zoom<span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+    center<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">16.3602</span><span class="token punctuation">,</span> <span class="token number">48.2190</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    layers<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'osm'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'Open Street Map'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+        visible<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'wmts-capabilities'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml'</span><span class="token punctuation">,</span>
+          layerName<span class="token operator">:</span> <span class="token string">'osm_3857'</span><span class="token punctuation">,</span>
+          matrixSet<span class="token operator">:</span> <span class="token string">'GoogleMapsCompatible'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    features<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+          foo<span class="token operator">:</span> <span class="token string">'bar'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        coordinates<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token number">16.3602</span><span class="token punctuation">,</span>
+          <span class="token number">48.2188</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        icon<span class="token operator">:</span> <span class="token punctuation">{</span>
+          src<span class="token operator">:</span> <span class="token string">'https://eox.at/EOX-POI.png'</span><span class="token punctuation">,</span>
+          scale<span class="token operator">:</span> <span class="token number">0.3</span><span class="token punctuation">,</span>
+          anchor<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          size<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">258</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="map-created-from-mapbox-style-document"><a href="#map-created-from-mapbox-style-document" class="header-anchor">#</a> Map created from Mapbox style document</h2> <div data-app="true" id="app" class="v-application fill-height v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-main fill-height" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-main__wrap"><div style="height:400px;"><!----></div></div></main></div></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-basic</span>
+    <span class="token attr-name">:zoom</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zoom<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:center</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:layers</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layers<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">showCenter</span><span class="token style-attr language-css"><span class="token attr-name">
+    <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">@featuresClicked</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>featuresClicked<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>mapbasic<span class="token punctuation">'</span></span>
+  <span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map-basic</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> MapBasic <span class="token keyword">from</span> <span class="token string">'@eox/map-basic'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    MapBasic
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    zoom<span class="token operator">:</span> <span class="token number">13</span><span class="token punctuation">,</span>
+    center<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1783019</span><span class="token punctuation">,</span> <span class="token number">6148052</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    layers<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'mapbox'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'group'</span><span class="token punctuation">,</span>
+        <span class="token string">'mapbox-style-layers'</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token string">'/style_declarations.json'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">featuresClicked</span><span class="token punctuation">(</span><span class="token parameter">ftrs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      ftrs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>feature<span class="token punctuation">.</span>properties_<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="highlighting-features-by-attribute"><a href="#highlighting-features-by-attribute" class="header-anchor">#</a> Highlighting features by attribute</h2> <div data-app="true" id="app" class="v-application fill-height v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-main fill-height" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-main__wrap"><div style="height:400px;"><!----></div></div></main></div></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-basic</span>
+    <span class="token attr-name">:zoom</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zoom<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:center</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:layers</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>allLayers<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name">
+    <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>mapbasic<span class="token punctuation">'</span></span>
+  <span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-btn</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btnclicked<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    HIGHLIGHT SOME FEATURES
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-btn</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map-basic</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> MapBasic <span class="token keyword">from</span> <span class="token string">'@eox/map-basic'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Style<span class="token punctuation">,</span> Stroke<span class="token punctuation">,</span> Fill <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ol/style'</span><span class="token punctuation">;</span> <span class="token comment">// eslint-disable-line</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    MapBasic
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    zoom<span class="token operator">:</span> <span class="token number">13</span><span class="token punctuation">,</span>
+    center<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1783019</span><span class="token punctuation">,</span> <span class="token number">6148052</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    allLayers<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'terrain-light'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'Terrain Light'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'wmts-capabilities'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml'</span><span class="token punctuation">,</span>
+          layerName<span class="token operator">:</span> <span class="token string">'terrain-light'</span><span class="token punctuation">,</span>
+          matrixSet<span class="token operator">:</span> <span class="token string">'WGS84'</span><span class="token punctuation">,</span>
+
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token string">'declarations'</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token string">'Declarations'</span><span class="token punctuation">,</span>
+        type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+          url<span class="token operator">:</span> <span class="token string">'https://pg-tileserv.demo.hub.eox.at/demo.agri_data_declaration/{z}/{x}/{y}.pbf'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        style<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            stroke<span class="token operator">:</span> <span class="token punctuation">{</span>
+              color<span class="token operator">:</span> <span class="token string">'black'</span><span class="token punctuation">,</span>
+              width<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            fill<span class="token operator">:</span> <span class="token punctuation">{</span>
+              color<span class="token operator">:</span> <span class="token string">'blue'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">basicStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Style</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        stroke<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Stroke</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          color<span class="token operator">:</span> <span class="token string">'black'</span><span class="token punctuation">,</span>
+          width<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        fill<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Fill</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          color<span class="token operator">:</span> <span class="token string">'yellow'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">btnclicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>highlighted <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token constant">SNAR_BEZEICHNUNG</span><span class="token operator">:</span> <span class="token string">'KÖRNERMAIS'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> layer <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>mapbasic<span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>declarations<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>$children<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>$layer<span class="token punctuation">;</span>
+      <span class="token comment">// update style</span>
+      layer<span class="token punctuation">.</span><span class="token function">setStyle</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>featureStyle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">featureStyle</span><span class="token punctuation">(</span><span class="token parameter">feature</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> highlightedArr <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>highlighted<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token keyword">this</span><span class="token punctuation">.</span>highlighted <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>highlighted<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">let</span> style <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">// hides the feature by default</span>
+      highlightedArr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>feature<span class="token punctuation">.</span>properties_<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">===</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            style <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>basicStyle<span class="token punctuation">;</span> <span class="token comment">// shows the feature with matching key/val</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> style<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="vector-layer-with-tooltips"><a href="#vector-layer-with-tooltips" class="header-anchor">#</a> Vector layer with tooltips</h2> <div data-app="true" id="app" class="v-application fill-height v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-main fill-height" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-main__wrap"><div style="height:400px;"><!----></div></div></main></div></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map-basic</span>
+    <span class="token attr-name">:zoom</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zoom<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:center</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:layers</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>layers<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name">
+    <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">slot-scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{hoverFeature}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hoverFeature<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>vl-overlay<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hoverFeature.coordinate<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:offset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>[7, 7]<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:positioning</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hoverFeature.tooltip.left ? <span class="token punctuation">'</span>top-right<span class="token punctuation">'</span> : <span class="token punctuation">'</span>top-left<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">slot-scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scope<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>map-tooltip<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-tooltip</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>showTooltip<span class="token punctuation">&quot;</span></span> <span class="token attr-name">attach</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>.map-tooltip<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+                  position: {{ scope.position }}
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+                  id: {{ hoverFeature.feature.get(&quot;id&quot;) }}
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-tooltip</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map-basic</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> MapBasic <span class="token keyword">from</span> <span class="token string">'@eox/map-basic'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> VTooltip <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuetify/lib'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    MapBasic<span class="token punctuation">,</span>
+    VTooltip<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      zoom<span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+      center<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1731756</span><span class="token punctuation">,</span> <span class="token number">6228616</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      showTooltip<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      layers<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'group'</span><span class="token punctuation">,</span>
+          layers<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              id<span class="token operator">:</span> <span class="token string">'terrain'</span><span class="token punctuation">,</span>
+              title<span class="token operator">:</span> <span class="token string">'Terrain Light'</span><span class="token punctuation">,</span>
+              type<span class="token operator">:</span> <span class="token string">'tile'</span><span class="token punctuation">,</span>
+              visible<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              source<span class="token operator">:</span> <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'wmts-capabilities'</span><span class="token punctuation">,</span>
+                url<span class="token operator">:</span> <span class="token string">'https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml'</span><span class="token punctuation">,</span>
+                layerName<span class="token operator">:</span> <span class="token string">'terrain-light'</span><span class="token punctuation">,</span>
+                matrixSet<span class="token operator">:</span> <span class="token string">'WGS84'</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              id<span class="token operator">:</span> <span class="token string">'parcels-static'</span><span class="token punctuation">,</span>
+              title<span class="token operator">:</span> <span class="token string">'Agricultural Parcels'</span><span class="token punctuation">,</span>
+              type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+              visible<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              source<span class="token operator">:</span> <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'vector-tile'</span><span class="token punctuation">,</span>
+                url<span class="token operator">:</span> <span class="token string">'https://pg-tileserv.demo.hub.eox.at/demo.agri_data_declaration/{z}/{x}/{y}.pbf'</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              style<span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                  stroke<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    color<span class="token operator">:</span> <span class="token string">'black'</span><span class="token punctuation">,</span>
+                    width<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                  fill<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    color<span class="token operator">:</span> <span class="token string">'grey'</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/EOX-A/elements/edit/main/docs/examples/map-basic.md" target="_blank" rel="noopener noreferrer">Edit this page on GitHub</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/7/2021, 11:01:51 AM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/elements/examples/map-layer-swipe.html">
+        map-layer-swipe
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/elements/assets/js/app.8d6c89a6.js" defer></script><script src="/elements/assets/js/11.5bd8283b.js" defer></script><script src="/elements/assets/js/48.5c8d5ce5.js" defer></script>
+  </body>
+</html>
