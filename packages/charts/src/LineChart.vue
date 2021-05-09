@@ -18,6 +18,10 @@ export default {
      * Chart options
      */
     options: Object,
+    /**
+     * Highlighted date
+     */
+    highlightedDate: Object
   },
   mixins: [reactiveProp],
   mounted() {

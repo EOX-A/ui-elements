@@ -1,16 +1,28 @@
 <template>
-  <charts
-    type="line"
-    :dataObject='dataObject'
-    :plotConfig='plotConfig'
-    :indexTooltips='true'
-    style="width: 100%; height: 100%;"
-    @dateSelected='dateSelected'
-  />
+  <div>
+    <charts
+      type="line"
+      :dataObject='dataObject'
+      :plotConfig='plotConfig'
+      :indexTooltips='true'
+      style="width: 100%; height: 100%;"
+      @dateSelected='dateSelected'
+      v-model="date"
+      @click="changeDate" 
+    />
+    <v-btn
+      @click="changeDate"
+      color="primary"
+      small
+    >
+      Change date
+    </v-btn>
+  </div>
 </template>
 <script>
 import Charts from '@eox/charts';
 import example from './example.json';
+import { DateTime } from 'luxon';
 
 export default {
   components: {
@@ -84,6 +96,7 @@ export default {
         },
       ],
     },
+    date: null,
   }),
   computed: {
     dataObject(){
@@ -94,6 +107,9 @@ export default {
     dateSelected(date) {
       console.log('Date selected: ' + date);
     },
-  },
+    changeDate() {
+      this.date = DateTime.fromISO('2019-01-28')
+    }
+  }
 }
 </script>

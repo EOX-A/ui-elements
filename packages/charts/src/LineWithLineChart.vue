@@ -45,6 +45,10 @@ export default {
      * Chart options
      */
     options: Object,
+    /**
+     * Highlighted date
+     */
+    highlightedDate: Object,
   },
   mixins: [reactiveProp],
   mounted() {
@@ -53,11 +57,18 @@ export default {
     // this.chartData is created in the mixin.
     // If you want to pass options please create a local options object
     this.renderChart(this.chartData, this.options);
+    console.log(this.$data._chart.tooltip.setActiveElements)
+    // console.log(this.chartData)
   },
   methods: {
     triggerRender() {
       this.renderChart(this.chartData, this.options);
     },
   },
+  watch: {
+    highlightedDate(v) {
+      
+    }
+  }
 };
 </script>

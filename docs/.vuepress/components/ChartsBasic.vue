@@ -1,10 +1,12 @@
 <template>
-  <charts
-    type="line"
-    :dataObject='dataObject'
-    :plotConfig='plotConfig'
-    style="width: 100%; height: 100%;"
-  />
+  <div>
+    <charts
+      type="line"
+      :dataObject='dataObject'
+      :plotConfig='plotConfig'
+      style="width: 100%; height: 100%;"
+    />
+  </div>
 </template>
 <script>
 import Charts from '@eox/charts';
@@ -33,11 +35,12 @@ export default {
         },
       ],
     },
+    date: null
   }),
   computed: {
     dataObject(){
       return example;
     }
-  },
+  }
 }
 </script>
