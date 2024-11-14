@@ -184,6 +184,7 @@ code {
   width: fit-content;
   min-width: 100%;
   line-height: var(--code-line-height, 1.7);
+  font-family: var(--code-font-family, monospace);
   font-size: var(--code-font-size, var(--font-size));
   color: var(--code-color, #004170);
 }
@@ -191,6 +192,5 @@ code {
   display: inline;
   border-radius: 4px;
   background: var(--code-bg-color, #8e96aa24);
-  font-family: var(--code-font-family, ui-monospace, monospace);
   padding: var(--code-padding, 3px 6px);
 }
