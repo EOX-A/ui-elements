@@ -7,6 +7,8 @@
 const inputClickMethod = (evt, EOxLayerControlLayer) => {
   const layer = EOxLayerControlLayer.layer; // The layer instance associated with the control.
 
+  console.log(layer);
+
   // Set the visibility of the layer based on the input's checked state.
   layer.setVisible(evt.target.checked);
 
@@ -30,6 +32,41 @@ const inputClickMethod = (evt, EOxLayerControlLayer) => {
       }
     });
   }
+
+  //console.log(document.querySelector("eox-layercontrol").isGloballyExclusive);
+
+  // Handle globally exclusive layers
+  let layerControl = document.querySelector("eox-layercontrol");
+
+  if (evt.target.checked
+        && layer.get("layerControlExclusive")
+        && layerControl.isGloballyExclusive) {
+    console.log("Globally exclusive layer");
+    // *:has(> .layers > ul) { /* styles to apply to the tag */ }      
+
+    // Find all exclusive layers across all groups
+    const allLayers = layerControl
+      .shadowRoot
+      .querySelectorAll("eox-layercontrol-layer");
+
+    const allExclusiveLayers = Array.from(allLayers)
+      .filter((layer) => layer.layer.get("layerControlExclusive"));
+
+    console.log("allExclusiveLayers", allExclusiveLayers);
+
+    /*allExclusiveLayers.forEach((exclusiveLayerElement) => {
+      const exclusiveLayer = exclusiveLayerElement.layer;
+
+      console.log("exclusiveLayer", exclusiveLayer);
+
+      // Ensure we don't hide the currently checked layer
+      if (exclusiveLayer !== layer) {
+        exclusiveLayer.setVisible(false);
+        exclusiveLayerElement.closest("eox-layercontrol-layer").requestUpdate();
+      }
+    });*/
+  }
+
 
   // Dispatch a 'changed' event to signal a change in the layer's state.
   EOxLayerControlLayer.dispatchEvent(

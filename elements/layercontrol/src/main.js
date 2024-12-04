@@ -60,6 +60,7 @@ export class EOxLayerControl extends LitElement {
     unstyled: { type: Boolean },
     styleOverride: { type: String },
     toolsAsList: { type: Boolean },
+    isGloballyExclusive: { type: Boolean },
   };
 
   /**
@@ -144,6 +145,13 @@ export class EOxLayerControl extends LitElement {
      * @type {Boolean}
      */
     this.toolsAsList = false;
+
+    /**
+     * Enable global exclusivity for layers that are not restricted to a group
+     *
+     * @type {Boolean}
+     */
+    this.isGloballyExclusive = false;
   }
 
   /**
