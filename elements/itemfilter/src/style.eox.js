@@ -188,6 +188,18 @@ ul:not(#filters) > li {
 }
 ul#results li {
   padding: 5px var(--padding);
+  display: flex;
+  justify-content: space-between;
+}
+ul#results li .result-action {
+  opacity: .5;
+  transition: opacity .3s ease-in-out;
+}
+ul#results li .result-action:hover {
+  opacity: 1;
+}
+ul#results li.highlighted .result-action > * {
+  filter: invert(1);
 }
 ul#results ul.cards {
   display: flex;

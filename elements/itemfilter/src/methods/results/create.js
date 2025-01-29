@@ -125,6 +125,21 @@ export function createItemListMethod(
                 `,
               )}
             </span>
+            ${when(
+              EOxItemFilterResults.resultActionIcon,
+              () => html`
+                <span
+                  class="result-action"
+                  @click=${() =>
+                    EOxItemFilterResults.dispatchEvent(
+                      new CustomEvent("result-action", {
+                        detail: item,
+                      }),
+                    )}
+                  >${unsafeHTML(EOxItemFilterResults.resultActionIcon)}</span
+                >
+              `,
+            )}
           </li>
         `,
       )}

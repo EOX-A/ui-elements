@@ -68,6 +68,7 @@ export class EOxItemFilter extends LitElement {
       },
       externalFilter: { attribute: false, type: Function },
       resultType: { attribute: "result-type", type: String },
+      resultActionIcon: { attribute: false, type: String },
       unstyled: { type: Boolean },
     };
   }
@@ -242,6 +243,13 @@ export class EOxItemFilter extends LitElement {
     this.resultType = "list";
 
     /**
+     * Icon for result action. Supports html.
+     *
+     * @type String
+     */
+    this.resultActionIcon = undefined;
+
+    /**
      * Render the element without additional styles
      */
     this.unstyled = false;
@@ -382,6 +390,24 @@ export class EOxItemFilter extends LitElement {
   }
 
   /**
+   * Emits "result-action" event.
+   *
+   * @param {{detail: Object}} evt - "result-action" event triggered by result component
+   */
+  emitResultAction(evt) {
+    /**
+     * Fires when a result-action is clicked; event detail is `result`
+     */
+    this.dispatchEvent(
+      new CustomEvent("result-action", {
+        detail: evt.detail,
+        bubbles: true,
+        composed: true,
+      }),
+    );
+  }
+
+  /**
    * Renders the HTML template for the component.
    */
   render() {
@@ -471,7 +497,9 @@ export class EOxItemFilter extends LitElement {
               .resultAggregation=${this.#resultAggregation}
               .selectedResult=${this.selectedResult}
               .resultType=${this.resultType}
+              .resultActionIcon=${this.resultActionIcon}
               @result=${this.updateResult}
+              @result-action=${this.emitResultAction}
             >
               <slot name="resultstitle"
                 ><h6 class="main-heading">Results</h6></slot

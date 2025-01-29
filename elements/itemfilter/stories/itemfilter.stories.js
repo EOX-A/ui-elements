@@ -9,6 +9,7 @@ import {
   NestedPropertyStory,
   PreSetFilterStory,
   PrimaryStory,
+  ResultActionStory,
 } from "./index.js";
 
 export default {
@@ -60,3 +61,9 @@ export const CardDisplay = CardDisplayStory();
  * variable set to `row` instead of `column` (default)
  */
 export const CSSVariables = CSSVariablesStory();
+
+/**
+ * The `result-action` event is triggered when a result action is clicked. The icon can be configered with the
+ * `resultActionIcon` property.
+ */
+export const ResultAction = ResultActionStory();

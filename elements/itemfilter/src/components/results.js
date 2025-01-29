@@ -31,6 +31,7 @@ export class EOxItemFilterResults extends LitElement {
       resultAggregation: { attribute: false, type: Array },
       selectedResult: { state: true, type: Object },
       resultType: { attribute: "result-type", type: String },
+      resultActionIcon: { attribute: false, type: String },
     };
   }
 
@@ -61,6 +62,11 @@ export class EOxItemFilterResults extends LitElement {
      * @type String("list"|"card")
      */
     this.resultType = "list";
+
+    /**
+     * @type String
+     */
+    this.resultActionIcon = undefined;
   }
 
   /**

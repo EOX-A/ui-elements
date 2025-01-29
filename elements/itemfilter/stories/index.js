@@ -9,3 +9,4 @@ export { default as NestedPropertyStory } from "./nested-property"; // Item filt
 export { default as ExternalStory } from "./external"; // Item filter with external endpoint
 export { default as CardDisplayStory } from "./card-display";
 export { default as CSSVariablesStory } from "./css-variables";
+export { default as ResultActionStory } from "./result-action";
