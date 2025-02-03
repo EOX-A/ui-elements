@@ -26,7 +26,7 @@ export class EOxItemFilterResults extends LitElement {
   static get properties() {
     return {
       config: { attribute: false, type: Object },
-      results: { state: true, type: Object },
+      results: { state: true, type: Array },
       filters: { state: true, type: Object },
       resultAggregation: { attribute: false, type: Array },
       selectedResult: { state: true, type: Object },
@@ -41,6 +41,11 @@ export class EOxItemFilterResults extends LitElement {
      * @type Object
      */
     this.config = null;
+
+    /**
+     * @type Array
+     */
+    this.results = null;
 
     /**
      * @type Object
@@ -66,20 +71,18 @@ export class EOxItemFilterResults extends LitElement {
   /**
    * Creates a list of items based on the aggregation property.
    *
-   * @param {string} aggregationProperty - The property used for aggregation.
-   * @returns {import("lit")} - The template result for the item list.
-   * @private
+   * @param {string} [aggregationProperty] - The property used for aggregation.
+   * @returns {import("lit").HTMLTemplateResult} - The template result for the item list.
    */
   #createItemList(aggregationProperty) {
-    return createItemListMethod(aggregationProperty, this);
+    return createItemListMethod(this, aggregationProperty);
   }
 
   /**
    * Creates item details based on the aggregation property.
    *
    * @param {string} aggregationProperty - The property used for aggregation.
-   * @returns {import("lit")} - The template result for the item details.
-   * @private
+   * @returns {import("lit").HTMLTemplateResult} - The template result for the item details.
    */
   #createItemDetails(aggregationProperty) {
     return createItemDetailsMethod(aggregationProperty, this);
@@ -108,7 +111,7 @@ export class EOxItemFilterResults extends LitElement {
   /**
    * Handles the toggle event for accordion.
    *
-   * @param {Event} event - The toggle event.
+   * @param {CustomEvent} event - The toggle event.
    */
   handleAccordion(event) {
     toggleAccordion(event, this.config, this);

@@ -74,7 +74,6 @@ class EOxItemFilterSpatial extends LitElement {
   /**
    * Handles the click event for spatial filter mode selection.
    *
-   * @private
    * @param {string} mode - The mode of the spatial filter (e.g., "intersects", "within").
    */
   #handleClick(mode) {
@@ -165,8 +164,6 @@ class SpatialFilter extends LitElement {
 
   /**
    * Sets up the spatial filter using the setupSpatialMethod.
-   *
-   * @private
    */
   #setup() {
     setupSpatialMethod(this);

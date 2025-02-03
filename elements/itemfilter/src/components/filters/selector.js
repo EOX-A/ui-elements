@@ -119,7 +119,6 @@ export class EOxSelector extends LitElement {
    * Handles input events on the autocomplete input element.
    *
    * @param {Event} event - The input event.
-   * @private
    */
   #handleInput(event) {
     handleInputSelectorMethod(event, this);
@@ -128,8 +127,7 @@ export class EOxSelector extends LitElement {
   /**
    * Handles keydown events on the autocomplete input element.
    *
-   * @param {Event} event - The keydown event.
-   * @private
+   * @param {KeyboardEvent} event - The keydown event.
    */
   #handleKeyDown(event) {
     handleKeyDownSelectorMethod(event, this);
@@ -139,7 +137,6 @@ export class EOxSelector extends LitElement {
    * Toggles the selection of an item.
    *
    * @param {Object} item - The item to toggle.
-   * @private
    */
   #toggleItem(item) {
     toggleItemSelectorMethod(item, this);

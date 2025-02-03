@@ -4,7 +4,7 @@ import { autoUpdate, computePosition } from "@floating-ui/dom";
  * Init popover autoUpdate and position
  *
  * @param {Object} EOxItemFilterContainer - The EOxItemFilterContainer component instance.
- * @return {Function}
+ * @return {() => void}
  */
 function initPopover(EOxItemFilterContainer) {
   const trigger = EOxItemFilterContainer.renderRoot.querySelector(

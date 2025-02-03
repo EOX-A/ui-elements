@@ -37,7 +37,7 @@ export function handleToggleDropdownMethod(event, EOxItemFilterContainer) {
 /**
  * Handles the keydown event, resetting the search and hiding the dropdown if Escape is pressed in inline mode.
  *
- * @param {Event} event - The keydown event.
+ * @param {KeyboardEvent} event - The keydown event.
  * @param {Object} EOxItemFilterContainer - The EOxItemFilterContainer component instance.
  */
 export function handleKeyDownMethod(event, EOxItemFilterContainer) {
@@ -60,6 +60,7 @@ export function handleKeyDownMethod(event, EOxItemFilterContainer) {
 export function handleClickOutsideMethod(event, EOxItemFilterContainer) {
   if (
     EOxItemFilterContainer.inlineMode &&
+    event.target instanceof HTMLElement &&
     event.target.tagName !== "DROPDOWN-FORM" &&
     event.target.tagName !== "EOX-ITEMFILTER" &&
     EOxItemFilterContainer.showDropdown

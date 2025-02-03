@@ -7,12 +7,12 @@ import { getElement } from "@eox/elements-utils";
  *
  * @param {import("../../main").EOxDrawTools} EoxDrawTool - The drawing tool instance.
  * @param {Boolean} multipleFeatures - Allow adding more than one feature at a time
- * @returns {{EoxMap: import("@eox/map/src/main").EOxMap, OlMap: import("ol").Map}} - The map instances.
+ * @returns {{EoxMap: import("@eox/map").EOxMap, OlMap: import("ol").Map}} - The map instances.
  */
 const initLayerMethod = (EoxDrawTool, multipleFeatures) => {
   const mapQuery = getElement(EoxDrawTool.for);
 
-  const EoxMap = /** @type {import("@eox/map/src/main").EOxMap} */ (mapQuery);
+  const EoxMap = /** @type {import("@eox/map").EOxMap} */ (mapQuery);
 
   const OlMap = EoxMap.map;
 

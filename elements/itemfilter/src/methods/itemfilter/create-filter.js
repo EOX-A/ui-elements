@@ -8,7 +8,7 @@ import flatMap from "lodash.flatmap";
  * @param {Object} filterObject - The filter object containing filter details.
  * @param {number} tabIndex - The tab index for the filter element.
  * @param {Object} EOxItemFilter - The EOxItemFilter component instance.
- * @returns {TemplateResult} The HTML template for the filter element.
+ * @returns {import("lit").HTMLTemplateResult} The HTML template for the filter element.
  */
 function createFilterMethod(filterObject, tabIndex, EOxItemFilter) {
   // Create a unique ID for the filter element by replacing '|' with '-'

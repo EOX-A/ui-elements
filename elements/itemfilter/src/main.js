@@ -68,6 +68,7 @@ export class EOxItemFilter extends LitElement {
       },
       externalFilter: { attribute: false, type: Function },
       resultType: { attribute: "result-type", type: String },
+      styleOverride: { type: String },
       unstyled: { type: Boolean },
     };
   }
@@ -242,6 +243,13 @@ export class EOxItemFilter extends LitElement {
     this.resultType = "list";
 
     /**
+     * Overrides elements current CSS.
+     *
+     * @type {String}
+     */
+    this.styleOverride = "";
+
+    /**
      * Render the element without additional styles
      */
     this.unstyled = false;
@@ -279,7 +287,9 @@ export class EOxItemFilter extends LitElement {
       }),
     );
     if (this.inlineMode)
-      this.renderRoot.querySelector("eox-itemfilter-container").updateInline();
+      /** @type {import("./components/itemfilter-container").EOxItemFilterContainer} **/ (
+        this.renderRoot.querySelector("eox-itemfilter-container")
+      ).updateInline();
     this.requestUpdate();
   }
 
@@ -298,8 +308,7 @@ export class EOxItemFilter extends LitElement {
    *
    * @param {Object} filterObject - The filter object.
    * @param {number} tabIndex - The tab index for the filter element.
-   * @returns {import("lit")} - The template result for the filter element.
-   * @private
+   * @returns {import("lit").HTMLTemplateResult} - The template result for the filter element.
    */
   #createFilter(filterObject, tabIndex) {
     return createFilterMethod(filterObject, tabIndex, this);
@@ -310,8 +319,7 @@ export class EOxItemFilter extends LitElement {
    *
    * @param {Object} filterObject - The filter object.
    * @param {number} tabIndex - The tab index for the reset element.
-   * @returns {import("lit")} - The template result for the filter element.
-   * @private
+   * @returns {import("lit").HTMLTemplateResult} - The template result for the filter element.
    */
   #createReset(filterObject, tabIndex) {
     return createResetMethod(filterObject, tabIndex, this);
@@ -355,9 +363,10 @@ export class EOxItemFilter extends LitElement {
   updated(changedProperties) {
     ELEMENT_PROPERTIES.map((property) => {
       if (changedProperties.has(property)) {
-        this.firstUpdated();
+        this.firstUpdated(undefined);
         return true;
       }
+      return false;
     });
   }
 

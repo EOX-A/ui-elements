@@ -11,6 +11,9 @@ function searchFilterMethod(event, EOxItemFilterContainer) {
   const fuse = new Fuse(EOxItemFilterContainer.filterProperties, {
     keys: ["title"],
   });
+  if (!(event.target instanceof HTMLInputElement)) {
+    return;
+  }
   const inputText = event.target.value;
   const result = fuse.search(inputText);
   const matches = result.map((res) => res.item.key || res.item.keys.join("|"));

@@ -10,7 +10,10 @@ function resetSearchMethod(EOxItemFilterContainer) {
     "#eox-itemfilter-input-search",
   ).value = "";
   const event = { target: { value: "" } };
-  searchFilterMethod(event, EOxItemFilterContainer);
+  searchFilterMethod(
+    /** @type {Event} **/ (/** @type {unknown} **/ (event)),
+    EOxItemFilterContainer,
+  );
 }
 
 export default resetSearchMethod;

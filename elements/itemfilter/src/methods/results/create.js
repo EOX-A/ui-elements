@@ -9,7 +9,7 @@ import { getValue } from "../../helpers";
  *
  * @param {string} aggregationProperty - The property used for aggregation.
  * @param {Object} EOxItemFilterResults - The EOxItemFilterResults component instance.
- * @returns {TemplateResult} The HTML template for the item details view.
+ * @returns {import("lit").HTMLTemplateResult} The HTML template for the item details view.
  */
 export function createItemDetailsMethod(
   aggregationProperty,
@@ -33,7 +33,7 @@ export function createItemDetailsMethod(
         </span>
       </summary>
       <div>
-        ${createItemListMethod(aggregationProperty, EOxItemFilterResults)}
+        ${createItemListMethod(EOxItemFilterResults, aggregationProperty)}
       </div>
     </details>
   `;
@@ -42,13 +42,13 @@ export function createItemDetailsMethod(
 /**
  * Creates the item list view for the aggregation property in the EOxItemFilterResults component.
  *
- * @param {string} aggregationProperty - The property used for aggregation.
  * @param {Object} EOxItemFilterResults - The EOxItemFilterResults component instance.
- * @returns {TemplateResult} The HTML template for the item list view.
+ * @param {string} [aggregationProperty] - The property used for aggregation.
+ * @returns {import("lit").HTMLTemplateResult} The HTML template for the item list view.
  */
 export function createItemListMethod(
-  aggregationProperty,
   EOxItemFilterResults,
+  aggregationProperty,
 ) {
   const results = EOxItemFilterResults.results;
   const items = aggregationProperty

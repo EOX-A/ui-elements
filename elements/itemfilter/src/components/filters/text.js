@@ -44,13 +44,11 @@ export class EOxItemFilterText extends LitElement {
     /**
      * @type Boolean
      */
-    this.unstyled = false;
+    this.isValid = false;
   }
 
   /**
    * Handles the input event by calling the textInputHandlerMethod with the current context.
-   *
-   * @private
    */
   #inputHandler = () => {
     textInputHandlerMethod(this);

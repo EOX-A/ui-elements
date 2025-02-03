@@ -4,7 +4,7 @@ import { initSelection } from ".";
  * handles switching between selection and drawing and updates of the selection layer
  *
  * @param {import("../../main").EOxDrawTools} EoxDrawTool
- * @param {import("@eox/map/src/main").EOxMap} EoxMap
+ * @param {import("@eox/map").EOxMap} EoxMap
  * @param {string} oldLayerId
  * @param {string} updatedLayerId
  * @returns

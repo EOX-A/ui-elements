@@ -1,7 +1,7 @@
 /**
  * Handles the toggle event for the accordion.
  *
- * @param {Event} event - The toggle event.
+ * @param {CustomEvent} event - The toggle event.
  * @param {Object} config - The configuration object for item-filter.
  * @param {Element} that
  */

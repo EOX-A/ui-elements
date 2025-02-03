@@ -10,7 +10,9 @@ export function handleChipClickMethod(evt, EOxItemFilterChips) {
     chip.classList.remove("highlighted");
   });
   // Add the 'highlighted' class to the clicked chip
-  evt.target.classList.add("highlighted");
+  if (evt.target instanceof HTMLElement) {
+    evt.target.classList.add("highlighted");
+  }
   EOxItemFilterChips.requestUpdate();
 }
 
@@ -29,14 +31,18 @@ export function handleCloseMethod(event, index, EOxItemFilterChips) {
 /**
  * Handles keyboard events for the EOxItemFilterChips component.
  *
- * @param {Event} event - The keyboard event.
+ * @param {KeyboardEvent} event - The keyboard event.
  * @param {Object} EOxItemFilterChips - The EOxItemFilterChips component instance.
  */
 export function keyboardEventListenerMethod(event, EOxItemFilterChips) {
   const { code, target } = event;
 
-  // Ignore are events that don't come from seach input
-  if (target.id !== "eox-itemfilter-input-search") return;
+  // Ignore the events that don't come from search input
+  if (
+    target instanceof HTMLElement &&
+    target.id !== "eox-itemfilter-input-search"
+  )
+    return;
 
   // If the parent element is hidden and the key is one of the specified keys, do nothing
   if (
@@ -53,7 +59,11 @@ export function keyboardEventListenerMethod(event, EOxItemFilterChips) {
 
   // Handle specific keyboard keys
   if (["ArrowLeft", "ArrowRight", "Escape", "Backspace"].includes(code))
-    handleKeyboard(code, event.target.value ?? "", EOxItemFilterChips);
+    handleKeyboard(
+      code,
+      /** @type {HTMLInputElement} **/ (event.target).value ?? "",
+      EOxItemFilterChips,
+    );
 }
 
 /**

@@ -67,6 +67,9 @@ export function toggleItemSelectorMethod(item, EOxItemFilterSelector) {
  * @param {Object} EOxItemFilterSelector - The EOxItemFilterSelector component instance.
  */
 export function handleInputSelectorMethod(event, EOxItemFilterSelector) {
+  if (!(event.target instanceof HTMLInputElement)) {
+    return;
+  }
   EOxItemFilterSelector.query = event.target.value;
   EOxItemFilterSelector.showSuggestions = true;
 }
@@ -74,7 +77,7 @@ export function handleInputSelectorMethod(event, EOxItemFilterSelector) {
 /**
  * Handles keydown events for the selector and navigates or selects items based on the key pressed.
  *
- * @param {Event} event - The keydown event.
+ * @param {KeyboardEvent} event - The keydown event.
  * @param {Object} EOxItemFilterSelector - The EOxItemFilterSelector component instance.
  */
 export function handleKeyDownSelectorMethod(event, EOxItemFilterSelector) {

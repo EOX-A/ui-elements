@@ -39,7 +39,6 @@ export class EOxItemFilterExpandContainer extends LitElement {
    * Dispatches a custom event "details-toggled" with the event details.
    *
    * @param {Event} event - The toggle event.
-   * @private
    */
   #handleDetailsToggle(event) {
     this.dispatchEvent(

@@ -39,7 +39,7 @@ export class EOxItemFilterRange extends LitElement {
     this.tabIndex = 0;
 
     /**
-     * @type Function
+     * @type {(evt: CustomEvent<any>) => void}
      */
     this.inputHandler = this.#inputHandler.bind(this);
 
@@ -54,8 +54,7 @@ export class EOxItemFilterRange extends LitElement {
   /**
    * Handles the input event for the range slider.
    *
-   * @param {Event} evt - The input event.
-   * @private
+   * @param {CustomEvent} evt - The input event.
    */
   #inputHandler(evt) {
     rangeInputHandlerMethod(evt, this);
@@ -66,8 +65,7 @@ export class EOxItemFilterRange extends LitElement {
    *
    * @param {string} val - The value of the label.
    * @param {string} pos - The position of the label (before or after).
-   * @returns {string} - The generated label.
-   * @private
+   * @returns {import("lit").HTMLTemplateResult} - The generated label.
    */
   #label(val, pos) {
     return rangeLabelMethod(val, pos, this);

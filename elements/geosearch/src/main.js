@@ -76,9 +76,8 @@ class EOxGeoSearch extends LitElement {
        *
        */
       endpoint: { type: String },
-      for: {
-        type: String,
-      },
+
+      for: { type: String },
       /**
        * The name of the query parameter to use for the search query in the endpoint URI.
        *
@@ -132,6 +131,9 @@ class EOxGeoSearch extends LitElement {
         attribute: "results-direction",
       },
       unstyled: { type: Boolean },
+      /**
+       * Svg used as loading indicator
+       */
       loaderSvg: {
         type: String,
         attribute: "loader-svg",
@@ -140,7 +142,7 @@ class EOxGeoSearch extends LitElement {
   }
 
   /**
-   * @type import("../../map/main").EOxMap
+   * @type import("@eox/map").EOxMap
    */
   #eoxMap;
 
@@ -152,6 +154,7 @@ class EOxGeoSearch extends LitElement {
     this._isInputVisible = false;
     this._query = "";
     this._isLoading = false;
+    this.endpoint = undefined;
     /**
      * Query selector of an `eox-map` (`String`, passed as an attribute or property)
      * or an `eox-map` DOM element (`HTMLElement`, passed as property)
@@ -159,11 +162,22 @@ class EOxGeoSearch extends LitElement {
      * @type {String|HTMLElement}
      */
     this.for = "eox-map";
-    this.listDirection = "right";
+    this.queryParameter = "q";
+    this.button = false;
+    this.label = undefined;
+    this.direction = "right";
     this.resultsDirection = "down";
     this.interval = 800;
+    this.small = false;
+    /**
+     * Render the element without additional styles
+     */
+    this.unstyled = false;
     this.loaderSvg = loaderSvg;
 
+    /**
+     * @private
+     */
     this.fetchDebounced = _debounce(async () => {
       if (this._query.length < 2) return;
       this._isLoading = true;
@@ -206,7 +220,11 @@ class EOxGeoSearch extends LitElement {
 
     // Auto-focus the input field when it becomes visible
     if (this._isInputVisible) {
-      setTimeout(() => this.renderRoot.querySelector("#gazetteer").focus());
+      setTimeout(() =>
+        /** @type {HTMLElement} **/ (
+          this.renderRoot.querySelector("#gazetteer")
+        ).focus(),
+      );
     }
   }
 
@@ -282,9 +300,7 @@ class EOxGeoSearch extends LitElement {
     const foundElement = getElement(this.for);
 
     if (foundElement) {
-      const EoxMap = /** @type {import("@eox/map/main").EOxMap} */ (
-        foundElement
-      );
+      const EoxMap = /** @type {import("@eox/map").EOxMap} */ (foundElement);
       this.eoxMap = EoxMap;
     }
   }
@@ -303,6 +319,9 @@ class EOxGeoSearch extends LitElement {
     }
   }
 
+  /**
+   * @private
+   */
   get eoxMap() {
     return this.#eoxMap;
   }
@@ -427,6 +446,10 @@ class EOxGeoSearchItem extends LitElement {
 
   constructor() {
     super();
+
+    this.item = undefined;
+    this.onClick = undefined;
+    this.unstyled = false;
   }
 
   render() {

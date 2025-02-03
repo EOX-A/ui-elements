@@ -58,12 +58,12 @@ export class EOxItemFilterContainer extends LitElement {
     this.filters = {};
 
     /**
-     * @type Function
+     * @type {(this: Document, ev: MouseEvent|FocusEvent) => any}
      */
     this._handleClickOutside = this.#handleClickOutside.bind(this);
 
     /**
-     * @type Function
+     * @type {(this: Document, ev: KeyboardEvent) => any}
      */
     this._handleKeyDown = this.#handleKeyDown.bind(this);
   }
@@ -72,7 +72,9 @@ export class EOxItemFilterContainer extends LitElement {
    * @type Boolean
    */
   set showDropdown(show) {
-    this.renderRoot.querySelector("[popover]").togglePopover(show);
+    /** @type {HTMLElement} **/ (
+      this.renderRoot.querySelector("[popover]")
+    ).togglePopover(show);
   }
 
   get showDropdown() {
@@ -125,6 +127,8 @@ export class EOxItemFilterContainer extends LitElement {
   /**
    * Stores the autoUpdate cleanup function to be called
    * when disconnected
+   *
+   * @type {() => void}
    * @private
    */
   _overlayCleanup() {}
@@ -133,7 +137,6 @@ export class EOxItemFilterContainer extends LitElement {
    * Handles click events outside the component to close the dropdown.
    *
    * @param {Event} event - The click event.
-   * @private
    */
   #handleClickOutside(event) {
     handleClickOutsideMethod(event, this);
@@ -142,8 +145,7 @@ export class EOxItemFilterContainer extends LitElement {
   /**
    * Handles keydown events for the component.
    *
-   * @param {Event} event - The keydown event.
-   * @private
+   * @param {KeyboardEvent} event - The keydown event.
    */
   #handleKeyDown(event) {
     handleKeyDownMethod(event, this);
@@ -153,7 +155,6 @@ export class EOxItemFilterContainer extends LitElement {
    * Toggles the dropdown visibility.
    *
    * @param {Event} event - The toggle event.
-   * @private
    */
   #handleToggleDropdown(event) {
     handleToggleDropdownMethod(event, this);
@@ -161,8 +162,6 @@ export class EOxItemFilterContainer extends LitElement {
 
   /**
    * Shows the dropdown on input focus.
-   *
-   * @private
    */
   #handleShowDropdownOnFocus() {
     handleShowDropdownOnFocusMethod(this);
@@ -172,7 +171,6 @@ export class EOxItemFilterContainer extends LitElement {
    * Handles click events on the form to prevent closing the dropdown.
    *
    * @param {Event} event - The click event.
-   * @private
    */
   #handleFormClick(event) {
     handleFormClickMethod(event, this);
@@ -182,7 +180,6 @@ export class EOxItemFilterContainer extends LitElement {
    * Resets the filter using the resetFilterMethod.
    *
    * @param {Event} event - The reset event.
-   * @private
    */
   #resetFilter(event) {
     resetFilterMethod(event, this);
@@ -192,7 +189,6 @@ export class EOxItemFilterContainer extends LitElement {
    * Searches the filter using the searchFilterMethod.
    *
    * @param {Event} event - The search event.
-   * @private
    */
   #searchFilter(event) {
     searchFilterMethod(event, this);

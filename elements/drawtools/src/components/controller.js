@@ -155,7 +155,10 @@ export class EOxDrawToolsController extends LitElement {
             <button
               data-cy="importBtn"
               class="import icon"
-              @click=${() => this.querySelector("#import-file").click()}
+              @click=${() =>
+                /**@type {HTMLElement}*/ (
+                  this.querySelector("#import-file")
+                ).click()}
             >
               import
             </button>

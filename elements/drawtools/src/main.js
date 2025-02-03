@@ -47,7 +47,7 @@ export class EOxDrawTools extends LitElement {
   }
 
   /**
-   * @type import("../../map/src/main").EOxMap
+   * @type import("@eox/map").EOxMap
    */
   #eoxMap;
 
@@ -216,7 +216,7 @@ export class EOxDrawTools extends LitElement {
   }
 
   /**
-   * @param {DragEvent | Event} evt - The event object from the file input interaction.
+   * @param {DragEvent} evt - The event object from the file input interaction.
    */
   handleFilesChange(evt) {
     handleFiles(evt, this);
@@ -320,8 +320,7 @@ export class EOxDrawTools extends LitElement {
           discard: () => this.discardDrawing(),
           editor: (/** @type {{ target: { value: string; }; }} */ evt) =>
             this.handleFeatureChange(evt.target.value, true),
-          import: (/** @type {DragEvent | Event} */ evt) =>
-            this.handleFilesChange(evt),
+          import: (/** @type {DragEvent} */ evt) => this.handleFilesChange(evt),
         }}
         ?select=${!!this.layerId}
         .unstyled=${this.unstyled}

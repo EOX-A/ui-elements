@@ -14,6 +14,9 @@ export function resetRangeMethod(EOxItemFilterRange) {
     EOxItemFilterRange.filterObject,
   );
   if (EOxItemFilterRange.filterObject) {
+    /**
+     * @type {import("toolcool-range-slider").RangeSlider}
+     */
     const eleTCRangeSlider =
       EOxItemFilterRange.querySelector("tc-range-slider");
     const min = EOxItemFilterRange.filterObject.min;
@@ -27,7 +30,7 @@ export function resetRangeMethod(EOxItemFilterRange) {
 /**
  * Handles input changes for the range filter and updates the filter state accordingly.
  *
- * @param {Event} evt - The input event that triggers the update.
+ * @param {CustomEvent} evt - The input event that triggers the update.
  * @param {Object} EOxItemFilterRange - The EOxItemFilterRange component instance.
  */
 export function rangeInputHandlerMethod(evt, EOxItemFilterRange) {
@@ -70,7 +73,7 @@ export function rangeInputHandlerMethod(evt, EOxItemFilterRange) {
  * @param {number|string} val - The value of the range label.
  * @param {string} pos - The position of the range label (e.g., "min" or "max").
  * @param {Object} EOxItemFilterRange - The EOxItemFilterRange component instance.
- * @returns {TemplateResult<1>} The HTML template for the range label.
+ * @returns {import("lit").HTMLTemplateResult}
  */
 export function rangeLabelMethod(val, pos, EOxItemFilterRange) {
   const isDate = Boolean(EOxItemFilterRange.filterObject.format === "date");

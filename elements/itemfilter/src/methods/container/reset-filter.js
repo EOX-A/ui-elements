@@ -5,6 +5,9 @@
  * @param {Object} EOxItemFilterContainer - The EOxItemFilterContainer component instance.
  */
 function resetFilterMethod(event, EOxItemFilterContainer) {
+  if (!(event.target instanceof HTMLElement)) {
+    return;
+  }
   const filterKey = event.target.getAttribute("data-close").replace("|", "-");
   EOxItemFilterContainer.querySelector(`#filter-${filterKey}`).reset();
   EOxItemFilterContainer.dispatchEvent(new CustomEvent("filter"));

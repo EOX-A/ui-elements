@@ -3,7 +3,7 @@
  * It configures the map to react visually to drag-and-drop actions and processes dropped files.
  *
  * @param {import("../main.js").EOxDrawTools} EOxDrawTool - The drawing tool instance.
- * @param {import("@eox/map/main").EOxMap} EOxMap - The EOx Map instance.
+ * @param {import("@eox/map").EOxMap} EOxMap - The EOx Map instance.
  */
 export function initMapDragDropImport(EOxDrawTool, EOxMap) {
   // Helper function to prevent default behavior for drag and drop events
@@ -49,14 +49,16 @@ function preventDefaults(e) {
  * Handles file input from drag-and-drop or file selection events,
  * forwarding each file to a specified processing function.
  *
- * @param {DragEvent | Event} e - The event object from the file input interaction.
+ * @param {DragEvent} e - The event object from the file input interaction.
  * @param {import("../main.js").EOxDrawTools} EOxDrawTool - The drawing tool instance.
  */
 export function handleFiles(e, EOxDrawTool) {
   preventDefaults(e);
 
   // Extract files from the event, supporting both drag-and-drop and file input sources
-  const files = e.dataTransfer ? e.dataTransfer.files : e.target.files;
+  const files = e.dataTransfer
+    ? e.dataTransfer.files
+    : /**@type {HTMLInputElement}*/ (e.target).files;
 
   Array.from(files).forEach((file) => importFile(file, EOxDrawTool));
 }
