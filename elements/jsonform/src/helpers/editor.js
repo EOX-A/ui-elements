@@ -43,6 +43,12 @@ export const createEditor = (element) => {
     },
   };
 
+  // Allow overriding the resolver
+  // see open issue at https://github.com/json-editor/json-editor/issues/1647
+  JSONEditor.defaults.resolvers.unshift(
+    (schema) => schema.options?.resolver && schema.options.resolver,
+  );
+
   // Initialize the JSONEditor with the given schema, value, and options
   const initEditor = () =>
     new JSONEditor(formEle, {
