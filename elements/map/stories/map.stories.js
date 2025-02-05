@@ -43,13 +43,6 @@ export default {
       .layers=${args.layers}
       .zoom=${args.zoom}
     ></eox-map>
-    <eox-map-2
-      style="width: 100%; height: 300px;"
-      .center=${args.center}
-      .controls=${args.controls}
-      .layers=${args.layers}
-      .zoom=${args.zoom}
-    ></eox-map-2>
   `,
 };
 
