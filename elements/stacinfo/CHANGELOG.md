@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2](https://github.com/EOX-A/EOxElements/compare/stacinfo-v0.6.1...stacinfo-v0.6.2) (2025-02-05)
+
+
+### Bug Fixes
+
+* Allow provider roles when filtering out links ([#1513](https://github.com/EOX-A/EOxElements/issues/1513)) ([d572c00](https://github.com/EOX-A/EOxElements/commit/d572c00ccab7d4cb45f31c4778546cdd7209230d))
+
 ## [0.6.1](https://github.com/EOX-A/EOxElements/compare/stacinfo-v0.6.0...stacinfo-v0.6.1) (2025-01-08)
 
 

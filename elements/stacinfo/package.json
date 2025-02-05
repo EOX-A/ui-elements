@@ -1,6 +1,6 @@
 {
   "name": "@eox/stacinfo",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "type": "module",
   "devDependencies": {
     "vite": "^6.0.3"
