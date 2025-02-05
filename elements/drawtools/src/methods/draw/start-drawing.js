@@ -1,3 +1,5 @@
+import measure from "../../helpers/measure.js";
+
 /**
  * Initiates the drawing process by initializing the draw layer,
  * activating drawing, and updating the drawing status.
@@ -11,6 +13,13 @@ const startDrawingMethod = (EoxDrawTool) => {
     EoxDrawTool.draw.setActive(true);
     // Add selection
     EoxDrawTool.selectionEvents.addSelectionEvent();
+
+    // Set up measurements, if desired
+    if (EoxDrawTool.measure) {
+      EoxDrawTool.draw.on("drawstart", (evt) => {
+        measure(evt, EoxDrawTool);
+      });
+    }
   };
 
   // Function to update the drawing status and request an update

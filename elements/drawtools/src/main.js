@@ -43,6 +43,7 @@ export class EOxDrawTools extends LitElement {
       format: { type: String },
       type: { type: String },
       unstyled: { type: Boolean },
+      measure: { type: Boolean },
     };
   }
 

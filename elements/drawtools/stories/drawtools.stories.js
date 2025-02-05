@@ -15,6 +15,7 @@ import {
   MultiFeaturesSelectStory,
   FeaturesProjectionStory,
   FormatStory,
+  DistanceMeasurementStory,
 } from "./index";
 
 export default {
@@ -89,3 +90,9 @@ export const CSSVariableOverride = CSSVariableOverrideStory;
  * By setting the `unstyled` attribute or property, the element has no styling applied.
  */
 export const Unstyled = UnstyledStory;
+
+/**
+ * Setting the `measure` attribute on the map and drawing with `LineString`s will cause
+ * a tooltip to be displayed showing the distance of the line being drawn.
+ */
+export const DistanceMeasurement = DistanceMeasurementStory;

@@ -8,7 +8,7 @@ const { drawTools, drawBtn } = TEST_SELECTORS;
  */
 const setLayerId = () => {
   const layerId = "regions";
-  cy.get("mock-map").then(($el) => {
+  cy.get("eox-map").then(($el) => {
     cy.log($el[0]);
     $el[0].layers = STORIES_VECTOR_LAYERS;
   });
